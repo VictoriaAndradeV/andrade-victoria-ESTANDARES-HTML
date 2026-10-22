@@ -43,9 +43,7 @@
             <figure>
                 <img src="img/tallerMecanico.jpg" alt="Área de trabajo del taller mecánico">
 
-                <figcaption>
-                    Imagen representativa de nuestro taller mecánico.
-                </figcaption>
+                <figcaption>Imagen representativa de nuestro taller mecánico.</figcaption>
             </figure>
 
         </section>
@@ -60,7 +58,6 @@
             <ul>
                 <li>
                     <h3>Cambio de aceite y filtros</h3>
-
                     <p> 
                         Servicio de mantenimiento que consiste
                         en sustituir el aceite del motor y los
@@ -84,7 +81,6 @@
 
                 <li>
                     <h3>Mantenimiento preventivo</h3>
-
                     <p> 
                         Revisión periódica del vehículo para
                         detectar posibles problemas mecánicos
@@ -147,6 +143,89 @@
                 Completa una solicitud para poder revisar
                 tu vehículo.
             </p>
+
+            <form method="post" enctype="multipart/form-data">
+                <p>Los campos indicados como obligatorios deben ser completados</p>
+
+                <fieldset>
+                    <legend>Datos de contacto</legend>
+                    <p>
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+                    </p>
+
+                    <p>
+                        <label for="nombre">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo" autocomplete="email" required>
+                    </p>
+
+                    <p>
+                        <label for="celular">Número de celular</label>
+                        <input type="tel" id="celular" name="celular" autocomplete="tel"
+                            inputmode="numeric" pattern="[0-9]{10}"
+                            title="Escribe exactamente 10 dígitos, sin espacios ni guiones"
+                            aria-describedby="ayuda-celular" required>
+                            <small id="ayuda-celular">
+                                Ingresa 10 dígitos sin espacios ni guiones.
+                                Ejemplo: 0962301254.
+                            </small>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>
+                        Datos del vehículo y revisión
+                    </legend>
+
+                    <p>
+                        <label for="placa">Placa del vehículo</label>
+                        <input type="text" id="placa" name="placa" required>
+                    </p>
+
+                    <p>
+                        <label for="kilometraje">Kilometraje actual</label>
+                        <input type="number" id="kilometraje" name="kilometraje"
+                            min="0" max="9999999" step="1" required>
+                    </p>
+
+                    <p>
+                        <label for="servicio">Servicio solicitado</label>
+                        <select id="servicio" name="servicio" required>
+                            <option value="">Selecciona un servicio</option>
+                            <option value="aceite">Cambio de aceite y filtros</option>
+                            <option value="frenos">Revisión del sistema de frenos</option>
+                            <option value="preventivo">Mantenimiento preventivo</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="fecha">Fecha preferida</label>
+                        <input type="date" id="fecha" name="fecha"
+                            aria-describedby="ayuda-fecha" required>
+                        <small id="ayuda-fecha">
+                            La fecha solicitada está sujeta a confirmación.
+                        </small>
+                    </p>
+
+                    <p>
+                        <label for="descripcion">Descripción del problema (opcional)</label>
+                        <textarea id="descripcion" name="descripcion" rows="4"></textarea>
+                    </p>
+
+                    <p>
+                        <label for="archivo">
+                            Fotografía o documento del vehículo (opcional)
+                        </label>
+                        <input type="file" id="archivo" name="archivo"
+                            accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf"
+                            aria-describedby="ayuda-archivo">
+                        <small id="ayuda-archivo">
+                            Selecciona un archivo JPG, PNG o PDF.
+                        </small>
+                    </p>
+                </fieldset>
+                <button type="submit">Enviar solicitud</button>
+            </form>
         </section>
     </main>
     
