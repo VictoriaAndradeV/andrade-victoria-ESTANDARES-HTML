@@ -9,7 +9,8 @@
 </head>
 
 <body>
-    <a href="#contenido">Saltar al contenido principal</a>
+    <a class="enlace-salto" href="#contenido">Saltar al contenido principal</a>
+
     <header id="inicio">
         <h1>VicStop Atelier - Taller mecánico</h1>
         <p>Servicio de mantenimiento y revisión de vehículos.</p>
@@ -19,9 +20,10 @@
             <a href="#servicios">Servicios automotrices</a>
             <a href="#tarifas">Costos de referencia</a>
             <a href="#solicitud">Agendar revisión</a>
-            <a href="#contacto">Contáctanos</a>
         </nav>
     </header>
+
+    <div class="estructura-principal">
 
     <main id="contenido">
         <section id="nosotros">
@@ -41,11 +43,11 @@
             </p>
 
             <figure>
+
                 <img src="img/tallerMecanico.jpg" alt="Área de trabajo del taller mecánico">
 
                 <figcaption>Imagen representativa de nuestro taller mecánico.</figcaption>
             </figure>
-
         </section>
 
         <section id="servicios">
@@ -55,7 +57,7 @@
                 mantenimiento preventivo y revisión mecánica.
             </p>
 
-            <ul>
+            <ul role="list">
                 <li>
                     <h3>Cambio de aceite y filtros</h3>
                     <p> 
@@ -128,15 +130,6 @@
 
         </section>
 
-        <aside>
-            <h2>Recomendaciones</h2>
-            <p> 
-                Es importante realizar revisiones periódicas
-                de tu vehículo, así detectarás a tiempo 
-                posibles averías.
-            </p>
-        </aside>
-
         <section id="solicitud">
             <h2>Agendar revisión</h2>
             <p>
@@ -150,17 +143,17 @@
                 <fieldset>
                     <legend>Datos de contacto</legend>
                     <p>
-                        <label for="nombre">Nombre completo</label>
+                        <label for="nombre">Nombre completo (obligatorio)</label>
                         <input type="text" id="nombre" name="nombre" autocomplete="name" required>
                     </p>
 
                     <p>
-                        <label for="nombre">Correo electrónico</label>
+                        <label for="correo">Correo electrónico (obligatorio)</label>
                         <input type="email" id="correo" name="correo" autocomplete="email" required>
                     </p>
 
                     <p>
-                        <label for="celular">Número de celular</label>
+                        <label for="celular">Número de celular (obligatorio)</label>
                         <input type="tel" id="celular" name="celular" autocomplete="tel"
                             inputmode="numeric" pattern="[0-9]{10}"
                             title="Escribe exactamente 10 dígitos, sin espacios ni guiones"
@@ -178,18 +171,18 @@
                     </legend>
 
                     <p>
-                        <label for="placa">Placa del vehículo</label>
+                        <label for="placa">Placa del vehículo (obligatorio)</label>
                         <input type="text" id="placa" name="placa" required>
                     </p>
 
                     <p>
-                        <label for="kilometraje">Kilometraje actual</label>
+                        <label for="kilometraje">Kilometraje actual (obligatorio)</label>
                         <input type="number" id="kilometraje" name="kilometraje"
                             min="0" max="9999999" step="1" required>
                     </p>
 
                     <p>
-                        <label for="servicio">Servicio solicitado</label>
+                        <label for="servicio">Servicio solicitado (obligatorio)</label>
                         <select id="servicio" name="servicio" required>
                             <option value="">Selecciona un servicio</option>
                             <option value="aceite">Cambio de aceite y filtros</option>
@@ -199,7 +192,7 @@
                     </p>
 
                     <p>
-                        <label for="fecha">Fecha preferida</label>
+                        <label for="fecha">Fecha preferida (obligatorio)</label>
                         <input type="date" id="fecha" name="fecha"
                             aria-describedby="ayuda-fecha" required>
                         <small id="ayuda-fecha">
@@ -213,31 +206,69 @@
                     </p>
 
                     <p>
-                        <label for="archivo">
-                            Fotografía o documento del vehículo (opcional)
-                        </label>
+                        <label for="archivo">Fotografía o documento del vehículo (opcional)</label>
                         <input type="file" id="archivo" name="archivo"
                             accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf"
                             aria-describedby="ayuda-archivo">
-                        <small id="ayuda-archivo">
-                            Selecciona un archivo JPG, PNG o PDF.
-                        </small>
+
+                        <small id="ayuda-archivo">Selecciona un archivo JPG, PNG o PDF.</small>
                     </p>
                 </fieldset>
                 <button type="submit">Enviar solicitud</button>
             </form>
         </section>
-    </main>
-    
-    <footer id="contacto">
-        <h2>Contáctanos</h2>
-        <address>
-            <p>VicStop Atelier</p>
-            <p>Dirección: Calle Lope de Vega y Av. 12 de Octubre.</p>
-            <p>Teléfono: 2884243</p>
-            <p>Correo electrónico: vicstopatelier@gmail.com</p>
-        </address>
 
+    </main>
+
+        <aside id="contacto">
+            <h2>Información del taller</h2>
+
+            <section>
+                <h3>Ubicación</h3>
+                <p>
+                    Nos encontramos en la calle Juan Ramón Jimenez y Av. Doce de Octubre.
+                </p>
+
+                <figure>
+                    <img src="img/ubicacion.png"
+                    alt="Mapa de ubicación del taller VicStop Atelier"
+                    width="1200"
+                    height="800"
+                    loading="lazy">
+                    
+                    <figcaption>
+                        Ubicación de nuestro taller mecánico.
+                    </figcaption>
+                
+                </figure>
+                
+            </section>
+
+            <section>
+                <h3>Horarios de atención</h3>
+                <ul>
+                    <li>Lunes a viernes: 08:00 a 19:00 </li>
+                    <li>Sábados: 08:00 a 13:00 </li>
+                    <li>Domingos: cerrrado</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Contáctanos</h3>
+                <address>
+                    <p>VicStop Atelier</p>
+                    <p>Teléfono: 2884243</p>
+                    <p>Correo electrónico: vicstopatelier@gmail.com</p>
+                </address>
+
+            </section>
+
+        </aside>
+
+    </div>
+    
+    <footer>
+       <p><small>2026 VicStop Atelier. Taller mecánico.</small></p>
     </footer>
 </body>
 </html>
