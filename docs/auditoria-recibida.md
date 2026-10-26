@@ -22,6 +22,12 @@
 
 ## Evidencias
 
+## Evidencia de recepción de auditoría
+
+Se recibió por correo electrónico el informe de auditoría realizado por Ariel Alexander Badillo Barrera, junto con el archivo Markdown y el ZIP de evidencias para su revisión.
+
+![Correo de recepción de auditoría](evidencias/captura-evidencia-captura-recibida.png)
+
 ### Evidencia 2. Formulario
 ![Formulario](evidencias/Formulario.png)
 
@@ -46,5 +52,7 @@
 ![Ficha 2](evidencias/ficha_2.png)
 
 ![Ficha 3](evidencias/ficha_3.png)
+
+
 
 

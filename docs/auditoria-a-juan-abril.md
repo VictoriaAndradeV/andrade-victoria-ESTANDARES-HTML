@@ -41,3 +41,9 @@
 - [E11: enlace de salto al contenido](evidencias/11-enlace-salto-foco.png) y [E12: controles radio/checkbox](evidencias/12-radio-checkbox.png).
 
 **Alcance:** la comprobación de 360 px y Grid se reprodujo en Chromium; las capturas E01–E12 proceden del informe previo. Las nuevas E13–E16 son extractos fieles del código original con resultados de prueba. Esto **no constituye una certificación WCAG 2.2 AA integral**; los cuatro hallazgos incluyen únicamente lo que tiene fundamento y evidencia verificables.
+
+## Evidencia de envío de auditoría
+
+Se envió por correo electrónico a Juan José Abril Landín el informe de auditoría correspondiente a la Parte 2 de la práctica, junto con el archivo ZIP que contiene los hallazgos y sus evidencias.
+
+![Correo de envío de auditoría a Juan Abril](evidencias/captura-evidencia-auditar.png)
